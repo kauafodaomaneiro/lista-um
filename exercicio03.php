@@ -14,6 +14,21 @@
     
 <?php
 
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+        if(isset($_POST['numero_positivo'])){
+            $numero = $_POST['numero_positivo'];
+
+            if($numero >0){
+                echo "O número: $numero é positivo";
+            }elseif($numero == 0){
+                echo "O número $numero é nulo";
+            }else{
+                echo "O número: $numero é negativo";
+            };
+
+        };
+    };
 
 ?>
 
